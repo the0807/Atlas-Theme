@@ -9,7 +9,7 @@
       "segments": [
         {
           "type": "text",
-          "template": "1",
+          "template": "\uec03",
           "foreground": "black",
           "style": "plain"
         }
@@ -27,21 +27,19 @@
           "style": "plain"
         },
         {
-          "type": "root",
-          "template": " \uf0e7 ",
-          "foreground": "yellow",
-          "style": "plain"
-        },
-        {
-          "type": "status",
-          "template": " {{ if gt .Code 0 }}\u2718 {{ else }}\uf120  {{ end }}{{ .UserName }} ",
+          "type": "text",
+          "template": " {{ if gt .Code 0 }}\u2718 {{ else if .Root }}\uf0e7 {{ else if .WSL }}\ue712 {{ else }}\uf120  {{ end }}",
           "leading_diamond": "\ue0b6",
           "foreground": "black",
           "background": "white",
-          "properties": {
-            "always_enabled": true
-          },
-          "foreground_templates": ["{{ if gt .Code 0 }}red{{ end }}"],
+          "foreground_templates": ["{{ if gt .Code 0 }}red{{ else if .Root }}yellow{{ else if .WSL }}blue{{ end }}"],
+          "style": "diamond"
+        },
+        {
+          "type": "text",
+          "template": "{{ .UserName }} ",
+          "foreground": "black",
+          "background": "white",
           "style": "diamond"
         },
         {
@@ -73,8 +71,14 @@
     },
     {
       "type": "prompt",
-      "alignment": "right",
+      "alignment": "left",
       "segments": [
+        {
+          "type": "text",
+          "template": "\uec03",
+          "foreground": "black",
+          "style": "plain"
+        },
         {
           "type": "python",
           "leading_diamond": "\ue0b6",
@@ -89,7 +93,7 @@
           "leading_diamond": "\ue0b6",
           "template": "\uf308  {{.Context}}::{{if .Namespace}}{{.Namespace}}{{else}}default{{end}}",
           "background": "#316ce4",
-          "foreground": "#ffffff",
+          "foreground": "white",
           "style": "diamond",
           "trailing_diamond": "\ue0b4 "
         }

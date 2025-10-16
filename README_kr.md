@@ -1,6 +1,7 @@
 # Atlas Theme for Oh My Posh
 
-![img1](img/img1.png)
+|![img1](img/img1.png)|![img2](img/img2.png)|
+|:---:|:---:|
 
 깔끔하고 심플한 [Oh My Posh](https://ohmyposh.dev/) 테마로, Dracula+ 색상 조합과 D2Coding Ligature Nerd Font를 추천합니다.
 
