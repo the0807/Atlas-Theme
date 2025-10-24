@@ -32,7 +32,7 @@
           "leading_diamond": "\ue0b6",
           "foreground": "black",
           "background": "white",
-          "foreground_templates": ["{{ if gt .Code 0 }}red{{ else if .Root }}yellow{{ else if .WSL }}blue{{ end }}"],
+          "foreground_templates": ["{{ if gt .Code 0 }}red{{ else if .Root }}yellow{{ else if .WSL }}black{{ end }}"],
           "style": "diamond"
         },
         {
