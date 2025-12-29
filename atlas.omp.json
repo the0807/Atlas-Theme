@@ -2,6 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "version": 3,
   "final_space": true,
+  "transient_prompt": {
+    "foreground": "white",
+    "template": "<yellow>{{ .PWD }}</>$ "
+  },
   "blocks": [
     {
       "type": "prompt",
@@ -59,12 +63,17 @@
           ],
           "style": "powerline",
           "powerline_symbol": "\ue0b0",
-          "properties": {
+          "options": {
             "branch_icon": "\ue725 ",
-            "display_status": true,
-            "fetch_upstream_icon": true,
-            "fetch_status": true,
-            "use_cache": false
+            "cherry_pick_icon": "\ue29b ",
+            "commit_icon": "\uf417 ",
+            "fetch_status": false,
+            "fetch_upstream_icon": false,
+            "merge_icon": "\ue727 ",
+            "no_commits_icon": "\uf0c3 ",
+            "rebase_icon": "\ue728 ",
+            "revert_icon": "\uf0e2 ",
+            "tag_icon": "\uf412 "
           }
         }
       ]
@@ -107,12 +116,12 @@
         {
           "type": "text",
           "template": "\u2570\u2500",
-          "foreground": "foreground",
+          "foreground": "white",
           "style": "plain"
         },
         {
           "type": "text",
-          "foreground": "foreground",
+          "foreground": "white",
           "style": "plain",
           "template": "\u276f"
         }
