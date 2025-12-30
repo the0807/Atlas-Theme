@@ -4,7 +4,7 @@
   "final_space": true,
   "transient_prompt": {
     "foreground": "white",
-    "template": "<yellow>{{ .PWD }}</>$ "
+    "template": "<#97C3F0>{{ .PWD }}</>$ "
   },
   "blocks": [
     {
